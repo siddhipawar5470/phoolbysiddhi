@@ -3,6 +3,14 @@ import { createRoot } from "react-dom/client";
 import "./styles.css";
 import logo from "./Images/Phool_by_Siddhi_LOGO.jpeg";
 
+import Ganapati1 from "./products/Ganapati1.jpg";
+import Ganapati2 from "./products/Ganapati2.jpg";
+import Ganapati3 from "./products/Ganapati3.jpg";
+import image1 from "./products/image1.jpeg";
+import image2 from "./products/image2.jpeg";
+import image3 from "./products/image3.jpeg";
+import image4 from "./products/image4.jpeg";
+
 const WA_NUMBER = "919371440016"; // Replace with your WhatsApp number
 
 const products = [
@@ -35,31 +43,95 @@ const products = [
   },
   {
     id: 4,
-    title: "Royal Floral Makhar",
+    title: "Sunflower Keychain",
     category: "Ganpati",
     price: "From ₹4,999",
     image: "https://images.unsplash.com/photo-1507501336603-6e31b4e4f5b5?auto=format&fit=crop&w=900&q=85",
     tag: "Signature",
-    description: "Statement floral frame designed for larger Ganpati celebrations."
+    description: "Sunflower Keychain for your keys"
   },
   {
     id: 5,
-    title: "Lotus Pooja Backdrop",
+    title: "Mini Sunflower",
     category: "Pooja",
     price: "From ₹1,999",
     image: "https://images.unsplash.com/photo-1509223197845-458d87318791?auto=format&fit=crop&w=900&q=85",
     tag: "New",
-    description: "Elegant floral backdrop for pooja, housewarming and festive corners."
+    description: "Elegant mini sunflower for pooja, housewarming and festive corners."
   },
   {
     id: 6,
-    title: "Blooming Celebration",
-    category: "Wedding",
+    title: "Red Hibiscus Flower",
+    category: "Pooja",
     price: "From ₹6,999",
     image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=85",
     tag: "Custom",
-    description: "Custom floral styling for engagement, haldi, mehendi and intimate weddings."
+    description: "Custom Red Hibiscus floral styling for Ganapati festival."
   }
+];
+
+/* * REAL PRODUCTS * ------------------------- * Add your actual product photos inside: * * src/Images/products/ * * The filenames below should match your images. */
+const realProducts = [
+  {
+    id: 101,
+    title: "Ganpati Floral Haar",
+    category: "Ganpati",
+    price: "Enquire for Price",
+    image: Ganapati1,
+    tag: "Handmade",
+    description:
+      "Beautiful handmade floral haar created specially for Ganpati celebrations.",
+  },
+  {
+    id: 102,
+    title: "Ganpati Hibiscus Haar",
+    category: "Ganpati",
+    price: "Enquire for Price",
+    image: Ganapati2,
+    tag: "Popular",
+    description:
+      "Beautiful handmade Hibiscus floral haar created specially for Ganpati celebrations.",
+  },
+  {
+    id: 103,
+    title: "Festive Flower Toran",
+    category: "Diwali",
+    price: "Enquire for Price",
+    image: Ganapati3,
+    tag: "Festive",
+    description:
+      "Reusable floral toran perfect for doors, entrances and festive corners.",
+  },
+  {
+    id: 104,
+    title: "Pooja Floral Decoration",
+    category: "Pooja",
+    price: "Enquire for Price",
+    image: image1,
+    tag: "New",
+    description:
+      "Elegant floral styling for pooja rooms, mandirs and special occasions.",
+  },
+  {
+    id: 105,
+    title: "Floral Bouquet",
+    category: "Premium",
+    price: "Enquire for Price",
+    image: image2,
+    tag: "Premium",
+    description:
+      "Beautiful floral arrangement handcrafted with attention to every detail.",
+  },
+  {
+    id: 106,
+    title: "Wedding Floral Decoration",
+    category: "Wedding",
+    price: "Enquire for Price",
+    image: image3,
+    tag: "Custom",
+    description:
+      "Custom floral decoration for weddings, engagements, haldi and mehendi.",
+  },
 ];
 
 const categories = ["All", "Ganpati", "Diwali", "Pooja", "Wedding", "Premium"];
@@ -74,6 +146,13 @@ function App() {
     [active]
   );
 
+  const filteredRealProducts = useMemo(
+    () =>
+      active === "All"
+        ? realProducts
+        : realProducts.filter((p) => p.category === active),
+    [active]
+  );
   const whatsapp = (text) =>
     `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
 
@@ -123,7 +202,7 @@ function App() {
       <main id="home">
         <section className="hero">
           <div className="hero-copy">
-            <div className="eyebrow">ARTIFICIAL FLORAL DÉCOR • MADE WITH LOVE</div>
+            <div className="eyebrow">🫶Crafted with Love, Bloomed by Siddhi🌷</div>
             <h1>Where every<br /><em>celebration blooms.</em></h1>
             <p>
               Beautiful, reusable flower decorations for Ganpati, Diwali,
@@ -143,9 +222,9 @@ function App() {
           </div>
 
           <div className="hero-art">
-                         
+
             <div className="hero-circle"></div>
-                          
+
             <div className="flower flower-a">✿</div>
             <div className="flower flower-b">✽</div>
             <div className="flower flower-c">❀</div>
@@ -217,6 +296,67 @@ function App() {
             ))}
           </div>
         </section>
+
+
+{/* NEW REAL PRODUCTS SECTION */}
+<section className="section" id="real-products">
+  <div className="section-head">
+    <div>
+      <div className="eyebrow">MADE BY SIDDHI</div>
+
+      <h2>
+        Our real <em>products.</em>
+      </h2>
+    </div>
+
+    <p>
+      These are our actual handcrafted creations. Browse our latest
+      products and message us directly for availability and pricing.
+    </p>
+  </div>
+
+  <div className="product-grid">
+    {filteredRealProducts.map((product) => (
+      <article className="product-card" key={product.id}>
+        <button
+          className="image-button"
+          onClick={() => setSelected(product)}
+          aria-label={`View ${product.title}`}
+        >
+          <img src={product.image} alt={product.title} />
+
+          <span className="tag">{product.tag}</span>
+
+          <span className="zoom">↗</span>
+        </button>
+
+        <div className="product-info">
+          <div>
+            <span className="category">{product.category}</span>
+
+            <h3>{product.title}</h3>
+
+            <p>{product.description}</p>
+          </div>
+
+          <div className="product-bottom">
+            <strong>{product.price}</strong>
+
+            <a
+              href={whatsapp(
+                `Hi Phool by Siddhi! I'm interested in your real product "${product.title}". Please share the price and details.`
+              )}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Enquire →
+            </a>
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
 
         <section className="story" id="about">
           <div className="story-image">
@@ -292,7 +432,7 @@ function App() {
       <footer>
         <div className="footer-brand">
           <a className="brand" href="#home"><span className="brand-mark">✿</span><span><strong>Phool</strong><small>by Siddhi</small></span></a>
-          <p>Artificial floral décor for beautiful Indian celebrations.</p>
+          <p>Handcrafted flowers, made with love by Siddhi. From festive Ganpati haar to custom floral creations, every piece is thoughtfully handmade to make your special moments bloom. ✨</p>
         </div>
         <div className="footer-links">
           <a href="#collections">Collections</a>
