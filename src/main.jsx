@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
+import logo from "./Images/Phool_by_Siddhi_LOGO.jpeg";
 
 const WA_NUMBER = "919371440016"; // Replace with your WhatsApp number
 
@@ -156,7 +157,7 @@ function App() {
             <div className="hero-image">
               <img
                 //src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1100&q=90"
-                src="src/Images/Phool_by_Siddhi_LOGO.jpeg"
+                src={logo}
                 alt="Colorful flowers"
               />
             </div>
