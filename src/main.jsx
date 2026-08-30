@@ -142,7 +142,9 @@ function App() {
           </div>
 
           <div className="hero-art">
+                         
             <div className="hero-circle"></div>
+                          
             <div className="flower flower-a">✿</div>
             <div className="flower flower-b">✽</div>
             <div className="flower flower-c">❀</div>
@@ -153,7 +155,8 @@ function App() {
             </div>
             <div className="hero-image">
               <img
-                src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1100&q=90"
+                //src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1100&q=90"
+                src="src/Images/Phool_by_Siddhi_LOGO.jpeg"
                 alt="Colorful flowers"
               />
             </div>
