@@ -10,71 +10,77 @@ import image1 from "./products/image1.jpeg";
 import image2 from "./products/image2.jpeg";
 import image3 from "./products/image3.jpeg";
 import image4 from "./products/image4.jpeg";
+import Flower_Bukeh from "./products/Flower_Bukeh.jpeg"
+import Flower_Bukeh_Collage from "./products/Flower_Bukeh_Collage.jpeg"
+import HaarGarland01 from "./products/HaarGarland01.jpeg"
+import HaarGarland02 from "./products/HaarGarland02.jpeg"
+import GanapatiImage4 from "./products/GanapatiImage4.jpeg"
+
 
 const WA_NUMBER = "919371440016"; // Replace with your WhatsApp number
 
 const products = [
   {
     id: 1,
-    title: "Marigold Mangal",
-    category: "Ganpati",
-    price: "From ₹1,499",
-    image: "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=900&q=85",
+    title: "Flowers Bukeh",
+    category: "Premium",
+    price: "From ₹99",
+    image: Flower_Bukeh,
     tag: "Best Seller",
-    description: "Classic marigold-inspired backdrop with hanging floral strings."
+    description: "Perfect for Gift and Decor."
   },
   {
     id: 2,
-    title: "Pink Petal Arch",
+    title: "Haar & Garland 01",
     category: "Premium",
-    price: "From ₹2,999",
-    image: "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=900&q=85",
-    tag: "Premium",
-    description: "Soft pink floral canopy for a graceful, photo-ready setup."
+    price: "From ₹399",
+    image: HaarGarland01,
+    tag: "Festive",
+    description: "Perfect for Pooja and Festive."
   },
   {
     id: 3,
-    title: "Diwali Phool Toran",
-    category: "Diwali",
-    price: "From ₹799",
-    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=85",
+     title: "Haar & Garland 02",
+    category: "Premium",
+    price: "From ₹399",
+    image: HaarGarland02,
     tag: "Festive",
-    description: "Reusable festive toran styling for doors, pooja rooms and entrances."
+    description: "Perfect for Pooja and Festive."
   },
   {
-    id: 4,
+    id: 104,
     title: "Sunflower Keychain",
     category: "Ganpati",
-    price: "From ₹4,999",
-    image: "https://images.unsplash.com/photo-1507501336603-6e31b4e4f5b5?auto=format&fit=crop&w=900&q=85",
-    tag: "Signature",
-    description: "Sunflower Keychain for your keys"
-  },
-  {
-    id: 5,
-    title: "Mini Sunflower",
-    category: "Pooja",
-    price: "From ₹1,999",
-    image: "https://images.unsplash.com/photo-1509223197845-458d87318791?auto=format&fit=crop&w=900&q=85",
+    price: "From ₹99",
+    image: image1,
     tag: "New",
-    description: "Elegant mini sunflower for pooja, housewarming and festive corners."
+    description: "Sunflower Keychain for your keys."
   },
   {
-    id: 6,
-    title: "Red Hibiscus Flower",
+    id: 105,
+     title: "Mini Sunflower",
     category: "Pooja",
-    price: "From ₹6,999",
-    image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=85",
+    price: "From ₹99",
+    image: image2,
+    tag: "Premium",
+   description: "Elegant mini sunflower for pooja, housewarming and festive corners."
+  },
+  {
+    id: 106,
+     title: "Red Hibiscus Flower",
+    category: "Pooja",
+    price: "From ₹99",
+    image: image3,
     tag: "Custom",
     description: "Custom Red Hibiscus floral styling for Ganapati festival."
-  }
+  },
 ];
 
 /* * REAL PRODUCTS * ------------------------- * Add your actual product photos inside: * * src/Images/products/ * * The filenames below should match your images. */
 const realProducts = [
   {
     id: 101,
-    title: "Ganpati Floral Haar",
+    title: "Ganpati Floral Haar 01",
     category: "Ganpati",
     price: "Enquire for Price",
     image: Ganapati1,
@@ -84,7 +90,7 @@ const realProducts = [
   },
   {
     id: 102,
-    title: "Ganpati Hibiscus Haar",
+    title: "Ganpati Hibiscus Haar 01",
     category: "Ganpati",
     price: "Enquire for Price",
     image: Ganapati2,
@@ -94,43 +100,41 @@ const realProducts = [
   },
   {
     id: 103,
-    title: "Festive Flower Toran",
-    category: "Diwali",
+    title: "Ganpati Hibiscus Haar 02",
+    category: "Ganpati",
     price: "Enquire for Price",
     image: Ganapati3,
-    tag: "Festive",
+    tag: "Popular",
     description:
-      "Reusable floral toran perfect for doors, entrances and festive corners.",
+      "Beautiful handmade Hibiscus floral haar created specially for Ganpati celebrations.",
   },
   {
     id: 104,
-    title: "Pooja Floral Decoration",
-    category: "Pooja",
+    title: "Ganpati Floral Haar 02",
+    category: "Ganpati",
     price: "Enquire for Price",
-    image: image1,
-    tag: "New",
+    image: GanapatiImage4,
+   tag: "Handmade",
     description:
-      "Elegant floral styling for pooja rooms, mandirs and special occasions.",
+      "Beautiful handmade floral haar created specially for Ganpati celebrations.",
   },
   {
     id: 105,
-    title: "Floral Bouquet",
-    category: "Premium",
-    price: "Enquire for Price",
+     title: "Mini Sunflower",
+    category: "Pooja",
+    price: "From ₹99",
     image: image2,
     tag: "Premium",
-    description:
-      "Beautiful floral arrangement handcrafted with attention to every detail.",
+   description: "Elegant mini sunflower for pooja, housewarming and festive corners."
   },
   {
     id: 106,
-    title: "Wedding Floral Decoration",
-    category: "Wedding",
-    price: "Enquire for Price",
+     title: "Red Hibiscus Flower",
+    category: "Pooja",
+    price: "From ₹99",
     image: image3,
     tag: "Custom",
-    description:
-      "Custom floral decoration for weddings, engagements, haldi and mehendi.",
+    description: "Custom Red Hibiscus floral styling for Ganapati festival."
   },
 ];
 
