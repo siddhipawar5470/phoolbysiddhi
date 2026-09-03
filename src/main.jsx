@@ -27,7 +27,7 @@ const WA_NUMBER = "919371440016"; // Replace with your WhatsApp number
 const products = [
   {
     id: 1,
-    title: "Flowers Bukeh",
+    title: "Flowers Bouquet",
     category: "Premium",
     price: "From ₹99",
     image: Flower_Bukeh,
@@ -134,7 +134,7 @@ const realProducts = [
   },
   {
     id: 106,
-    title: "Flower Bukeh",
+    title: "Flower Bouquet",
     category: "Wedding",
     price: "From ₹399",
     image: Flower05,
@@ -429,7 +429,7 @@ function App() {
             <div className="form-grid">
               <label>Name<input name="name" required placeholder="Your name" /></label>
               <label>Occasion<select name="occasion" defaultValue="Ganpati"><option>Ganpati</option><option>Diwali</option><option>Pooja</option><option>Wedding</option><option>Other</option></select></label>
-              <label>Budget<select name="budget" defaultValue="₹1,000 – ₹3,000"><option>Under ₹1,000</option><option>₹1,000 – ₹3,000</option><option>₹3,000 – ₹7,000</option><option>₹7,000+</option></select></label>
+              <label>Budget<select name="budget" defaultValue="₹300 – ₹500"><option>Under ₹100</option><option>₹100 – ₹300</option><option>₹300 – ₹500</option><option>₹500 – ₹1,000</option><option>₹1,000+</option></select></label>
               <label>Date<input name="date" type="date" /></label>
             </div>
             <label>Tell us about your decoration<textarea name="message" rows="4" placeholder="Space size, colour preference, idol size, delivery location..."></textarea></label>
