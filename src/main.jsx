@@ -3,13 +3,18 @@ import { createRoot } from "react-dom/client";
 import "./styles.css";
 import logo from "./Images/Phool_by_Siddhi_LOGO.jpeg";
 
+import Siddhi_logo_01 from "./products/Siddhi_logo_01.jpeg";
 import Ganapati1 from "./products/Ganapati1.jpg";
 import Ganapati2 from "./products/Ganapati2.jpg";
 import Ganapati3 from "./products/Ganapati3.jpg";
-import image1 from "./products/image1.jpeg";
-import image2 from "./products/image2.jpeg";
-import image3 from "./products/image3.jpeg";
-import image4 from "./products/image4.jpeg";
+import Flower01 from "./products/Flower01.jpeg";
+import Flower02 from "./products/Flower02.jpeg";
+import Flower03 from "./products/Flower03.jpeg";
+import Flower04 from "./products/Flower04.jpeg";
+import Flower05 from "./products/Flower05.jpeg";
+import Flower06 from "./products/Flower06.jpeg";
+import Flower07 from "./products/Flower07.jpeg";
+import Flower08 from "./products/Flower08.jpeg";
 import Flower_Bukeh from "./products/Flower_Bukeh.jpeg"
 import Flower_Bukeh_Collage from "./products/Flower_Bukeh_Collage.jpeg"
 import HaarGarland01 from "./products/HaarGarland01.jpeg"
@@ -40,7 +45,7 @@ const products = [
   },
   {
     id: 3,
-     title: "Haar & Garland 02",
+    title: "Haar & Garland 02",
     category: "Premium",
     price: "From ₹399",
     image: HaarGarland02,
@@ -52,25 +57,25 @@ const products = [
     title: "Sunflower Keychain",
     category: "Ganpati",
     price: "From ₹99",
-    image: image1,
+    image: Flower01,
     tag: "New",
     description: "Sunflower Keychain for your keys."
   },
   {
     id: 105,
-     title: "Mini Sunflower",
+    title: "Mini Sunflower",
     category: "Pooja",
     price: "From ₹99",
-    image: image2,
+    image: Flower02,
     tag: "Premium",
-   description: "Elegant mini sunflower for pooja, housewarming and festive corners."
+    description: "Elegant mini sunflower for pooja, housewarming and festive corners."
   },
   {
     id: 106,
-     title: "Red Hibiscus Flower",
+    title: "Red Hibiscus Flower",
     category: "Pooja",
     price: "From ₹99",
-    image: image3,
+    image: Flower03,
     tag: "Custom",
     description: "Custom Red Hibiscus floral styling for Ganapati festival."
   },
@@ -114,27 +119,27 @@ const realProducts = [
     category: "Ganpati",
     price: "Enquire for Price",
     image: GanapatiImage4,
-   tag: "Handmade",
+    tag: "Handmade",
     description:
       "Beautiful handmade floral haar created specially for Ganpati celebrations.",
   },
   {
     id: 105,
-     title: "Mini Sunflower",
+    title: "Flower",
     category: "Pooja",
     price: "From ₹99",
-    image: image2,
-    tag: "Premium",
-   description: "Elegant mini sunflower for pooja, housewarming and festive corners."
+    image: Flower04,
+    tag: "Handmade",
+    description: "Elegant mini flower for pooja, housewarming and festive corners."
   },
   {
     id: 106,
-     title: "Red Hibiscus Flower",
-    category: "Pooja",
-    price: "From ₹99",
-    image: image3,
+    title: "Flower Bukeh",
+    category: "Wedding",
+    price: "From ₹399",
+    image: Flower05,
     tag: "Custom",
-    description: "Custom Red Hibiscus floral styling for Ganapati festival."
+    description: "Perfect for Gift and Decor."
   },
 ];
 
@@ -302,69 +307,69 @@ function App() {
         </section>
 
 
-{/* NEW REAL PRODUCTS SECTION */}
-<section className="section" id="real-products">
-  <div className="section-head">
-    <div>
-      <div className="eyebrow">MADE BY SIDDHI</div>
+        {/* NEW REAL PRODUCTS SECTION */}
+        <section className="section" id="real-products">
+          <div className="section-head">
+            <div>
+              <div className="eyebrow">MADE BY SIDDHI</div>
 
-      <h2>
-        Our real <em>products.</em>
-      </h2>
-    </div>
+              <h2>
+                Our real <em>products.</em>
+              </h2>
+            </div>
 
-    <p>
-      These are our actual handcrafted creations. Browse our latest
-      products and message us directly for availability and pricing.
-    </p>
-  </div>
-
-  <div className="product-grid">
-    {filteredRealProducts.map((product) => (
-      <article className="product-card" key={product.id}>
-        <button
-          className="image-button"
-          onClick={() => setSelected(product)}
-          aria-label={`View ${product.title}`}
-        >
-          <img src={product.image} alt={product.title} />
-
-          <span className="tag">{product.tag}</span>
-
-          <span className="zoom">↗</span>
-        </button>
-
-        <div className="product-info">
-          <div>
-            <span className="category">{product.category}</span>
-
-            <h3>{product.title}</h3>
-
-            <p>{product.description}</p>
+            <p>
+              These are our actual handcrafted creations. Browse our latest
+              products and message us directly for availability and pricing.
+            </p>
           </div>
 
-          <div className="product-bottom">
-            <strong>{product.price}</strong>
+          <div className="product-grid">
+            {filteredRealProducts.map((product) => (
+              <article className="product-card" key={product.id}>
+                <button
+                  className="image-button"
+                  onClick={() => setSelected(product)}
+                  aria-label={`View ${product.title}`}
+                >
+                  <img src={product.image} alt={product.title} />
 
-            <a
-              href={whatsapp(
-                `Hi Phool by Siddhi! I'm interested in your real product "${product.title}". Please share the price and details.`
-              )}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Enquire →
-            </a>
+                  <span className="tag">{product.tag}</span>
+
+                  <span className="zoom">↗</span>
+                </button>
+
+                <div className="product-info">
+                  <div>
+                    <span className="category">{product.category}</span>
+
+                    <h3>{product.title}</h3>
+
+                    <p>{product.description}</p>
+                  </div>
+
+                  <div className="product-bottom">
+                    <strong>{product.price}</strong>
+
+                    <a
+                      href={whatsapp(
+                        `Hi Phool by Siddhi! I'm interested in your real product "${product.title}". Please share the price and details.`
+                      )}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Enquire →
+                    </a>
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
-        </div>
-      </article>
-    ))}
-  </div>
-</section>
+        </section>
 
         <section className="story" id="about">
           <div className="story-image">
-            <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=1000&q=90" alt="Pink flowers" />
+            <img src={Siddhi_logo_01} alt="Pink flowers" />
             <div className="story-note">
               <strong>01</strong>
               <span>Thoughtfully<br />designed</span>
@@ -394,10 +399,10 @@ function App() {
             <p>Use these looks as inspiration. We can change colours, flowers, size and styling to match your celebration.</p>
           </div>
           <div className="gallery">
-            <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=900&q=85" alt="Floral inspiration" />
-            <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=85" alt="Bright flowers" />
-            <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=900&q=85" alt="Pink flowers" />
-            <img src="https://images.unsplash.com/photo-1507501336603-6e31b4e4f5b5?auto=format&fit=crop&w=900&q=85" alt="Decor inspiration" />
+            <img src={Flower06} alt="Floral inspiration" />
+            <img src={Flower05} alt="Bright flowers" />
+            <img src={Flower08} alt="Pink flowers" />
+            <img src={Flower07} alt="Decor inspiration" />
           </div>
         </section>
 
